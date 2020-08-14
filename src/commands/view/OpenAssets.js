@@ -9,8 +9,8 @@ export default {
     const accept = opts.accept;
 
     am.setTarget(opts.target);
-    am.onClick(opts.onClick);
-    am.onDblClick(opts.onDblClick);
+    opts.onClick && am.onClick(opts.onClick);
+    opts.onClick && am.onDblClick(opts.onDblClick);
     am.onSelect(opts.onSelect);
 
     if (!this.rendered || types) {

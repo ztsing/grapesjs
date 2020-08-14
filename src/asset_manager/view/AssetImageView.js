@@ -48,7 +48,7 @@ export default AssetView.extend({
     this.$el.addClass(this.pfx + 'highlight');
 
     if (isFunction(onClick)) {
-      onClick(model);
+        onClick(model, this.collection.target);
     } else {
       this.updateTarget(this.collection.target);
     }
