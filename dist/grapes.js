@@ -31545,7 +31545,7 @@ var Component = backbone__WEBPACK_IMPORTED_MODULE_5___default.a.Model.extend(dom
         hasStyle = 1;
       }
 
-      if (hasStyle) {
+      if (hasStyle && !em.getConfig('withoutAutoElementId')) {
         attributes.id = this.getId();
       }
     }
@@ -38980,7 +38980,7 @@ var defaultConfig = {
   editors: editors,
   plugins: plugins,
   // Will be replaced on build
-  version: '0.16.16',
+  version: '0.16.17',
 
   /**
    * Initialize the editor with passed options

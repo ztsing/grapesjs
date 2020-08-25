@@ -475,7 +475,7 @@ const Component = Backbone.Model.extend(Styleable).extend(
           hasStyle = 1;
         }
 
-        if (hasStyle) {
+        if (hasStyle && ! em.getConfig('withoutAutoElementId')) {
           attributes.id = this.getId();
         }
       }
