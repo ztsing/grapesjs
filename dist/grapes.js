@@ -35208,7 +35208,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
       if (model.get('_innertext')) {
         el.removeAttribute('id');
       } else {
-        el.id = model.getId();
+        if (!em.getConfig('withoutAutoElementId')) {
+          el.id = model.getId();
+        }
       }
 
       var style = model.getStyle();
@@ -38978,7 +38980,7 @@ var defaultConfig = {
   editors: editors,
   plugins: plugins,
   // Will be replaced on build
-  version: '0.16.14',
+  version: '0.16.16',
 
   /**
    * Initialize the editor with passed options

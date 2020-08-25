@@ -238,7 +238,9 @@ export default Backbone.View.extend({
       if (model.get('_innertext')) {
         el.removeAttribute('id');
       } else {
-        el.id = model.getId();
+	if (! em.getConfig('withoutAutoElementId')) {
+          el.id = model.getId();
+        }
       }
       const style = model.getStyle();
       !isEmpty(style) && model.setStyle(style);
